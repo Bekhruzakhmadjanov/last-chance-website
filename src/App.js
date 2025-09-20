@@ -1,25 +1,46 @@
-import logo from './logo.svg';
-import './App.css';
+// App.js - Main Application Component
+import React, { useState } from 'react';
+import Header from './components/Header';
+import Home from './components/Home';
+import Tokenomics from './components/Tokenomics';
+import Presale from './components/Presale';
+import Roadmap from './components/Roadmap';
+import Announcements from './components/Announcements';
+import Footer from './components/Footer';
+import MobileNavigation from './components/MobileNavigation';
 
-function App() {
+const App = () => {
+  const [activeSection, setActiveSection] = useState('home');
+
+  const renderActiveSection = () => {
+    switch (activeSection) {
+      case 'home':
+        return <Home setActiveSection={setActiveSection} />;
+      case 'tokenomics':
+        return <Tokenomics />;
+      case 'presale':
+        return <Presale />;
+      case 'roadmap':
+        return <Roadmap />;
+      case 'announcements':
+        return <Announcements />;
+      default:
+        return <Home setActiveSection={setActiveSection} />;
+    }
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="min-h-screen bg-black text-white">
+      <Header activeSection={activeSection} setActiveSection={setActiveSection} />
+      
+      <main>
+        {renderActiveSection()}
+      </main>
+
+      <Footer />
+      <MobileNavigation activeSection={activeSection} setActiveSection={setActiveSection} />
     </div>
   );
-}
+};
 
 export default App;
