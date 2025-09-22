@@ -1,6 +1,7 @@
 // components/Header.js
 import React, { useState, useEffect } from 'react';
 import { Star, Target, Zap, TrendingUp, Bell } from 'lucide-react';
+import coinImage from '../assets/last-chance-coin.jpeg';
 
 const Header = ({ activeSection, setActiveSection }) => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -49,7 +50,7 @@ const Header = ({ activeSection, setActiveSection }) => {
                 logoHovered ? 'scale-110' : 'scale-100'
               }`}>
                 <img 
-                  src="/last-chance-coin.jpeg" 
+                  src={coinImage}
                   alt="Last Chance Token Logo" 
                   className={`w-full h-full object-contain rounded-full transition-all duration-300 ${
                     logoHovered ? 'rotate-12' : 'rotate-0'

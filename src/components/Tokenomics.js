@@ -1,6 +1,7 @@
 // components/Tokenomics.js
 import React, { useState, useEffect, useRef } from 'react';
 import { Gift, Clock } from 'lucide-react';
+import coinImage from '../assets/last-chance-coin.jpeg';
 
 // Move tokenomics data outside component to avoid dependency issues
 const TOKENOMICS_DATA = [
@@ -54,7 +55,7 @@ const Tokenomics = () => {
       }}
     >
       <img 
-        src="/last-chance-coin.jpeg" 
+        src={coinImage}
         alt="Last Chance Coin" 
         className="w-8 h-8 animate-spin"
         style={{ animationDuration: '12s' }}
@@ -83,10 +84,10 @@ const Tokenomics = () => {
       {/* Enhanced Title with typing effect */}
       <div className={`text-center mb-12 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
         <h2 className="text-5xl font-bold bg-gradient-to-r from-amber-400 to-amber-200 bg-clip-text text-transparent relative">
-          TOKENOMICS
+          Tokenomics
           {/* Glowing effect */}
           <div className="absolute inset-0 text-5xl font-bold text-amber-400/20 blur-sm animate-pulse">
-            TOKENOMICS
+            Tokenomics
           </div>
         </h2>
       </div>

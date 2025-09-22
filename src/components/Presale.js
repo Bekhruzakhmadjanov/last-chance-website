@@ -1,5 +1,7 @@
 // components/Presale.js
 import React, { useState, useEffect, useRef } from 'react';
+import coinImage from '../assets/last-chance-coin.jpeg';
+import qrImage from '../assets/frame.png';
 
 const Presale = () => {
   const [presaleProgress] = useState(67);
@@ -49,7 +51,7 @@ const Presale = () => {
       }}
     >
       <img 
-        src="/last-chance-coin.jpeg" 
+        src={coinImage}
         alt="Last Chance Coin" 
         className={`${size} animate-spin`}
         style={{ animationDuration: '15s' }}
@@ -95,7 +97,7 @@ const Presale = () => {
           {/* Background floating coins in content */}
           <div className="absolute inset-0 pointer-events-none overflow-hidden">
             <img 
-              src="/last-chance-coin.jpeg" 
+              src={coinImage}
               alt="Coin" 
               className="absolute top-4 right-4 w-16 h-16 opacity-20 animate-spin"
               style={{ 
@@ -104,13 +106,13 @@ const Presale = () => {
               }}
             />
             <img 
-              src="/last-chance-coin.jpeg" 
+              src={coinImage}
               alt="Coin" 
               className="absolute bottom-4 left-4 w-12 h-12 opacity-15 animate-bounce"
               style={{ animationDelay: '1s' }}
             />
             <img 
-              src="/last-chance-coin.jpeg" 
+              src={coinImage}
               alt="Coin" 
               className="absolute top-1/2 left-1/3 w-20 h-20 opacity-10 animate-pulse"
               style={{ animationDelay: '2s' }}
@@ -221,7 +223,7 @@ const Presale = () => {
             {/* Large rotating coin behind text */}
             <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 -z-10">
               <img 
-                src="/last-chance-coin.jpeg" 
+                src={coinImage}
                 alt="Last Chance Coin" 
                 className="w-64 h-64 opacity-20 animate-spin"
                 style={{ animationDuration: '20s' }}
@@ -250,7 +252,7 @@ const Presale = () => {
                   
                   {/* QR Code with hover effect */}
                   <img 
-                    src="/frame.png"
+                    src={qrImage}
                     alt="Telegram QR Code" 
                     className={`w-full h-full object-contain relative z-10 transition-transform duration-300 ${
                       qrHovered ? 'scale-105' : 'scale-100'

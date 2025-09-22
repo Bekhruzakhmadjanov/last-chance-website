@@ -1,5 +1,6 @@
 // components/Home.js
 import React, { useState, useEffect } from 'react';
+import coinImage from '../assets/last-chance-coin.jpeg';
 
 const TimeCard = ({ value, label }) => (
   <div className="bg-gradient-to-b from-amber-400 to-amber-600 text-black rounded-lg p-4 text-center min-w-[80px] transform hover:scale-110 transition-all duration-300 shadow-lg hover:shadow-amber-400/50">
@@ -107,7 +108,7 @@ const FloatingCoin = ({ delay = 0, duration = 15, direction = 'bottomLeftToTopRi
         style={animationStyle}
       >
         <img 
-          src="/last-chance-coin.jpeg" 
+          src={coinImage}
           alt="Last Chance Coin" 
           className="w-16 h-16 animate-spin"
           style={{ animationDuration: '8s' }}
@@ -185,7 +186,7 @@ const Home = ({ setActiveSection }) => {
           <div className="mb-8 relative">
             <div className="absolute inset-0 flex justify-center items-center">
               <img 
-                src="/last-chance-coin.jpeg" 
+                src={coinImage}
                 alt="Last Chance Coin" 
                 className="w-32 h-32 md:w-48 md:h-48 opacity-30 animate-spin"
                 style={{ animationDuration: '20s' }}
@@ -205,7 +206,7 @@ const Home = ({ setActiveSection }) => {
           
           {/* Enhanced Countdown Timer */}
           <div className="mb-12">
-            <h3 className="text-2xl font-semibold text-amber-400 mb-6">Presale Starts In:</h3>
+            <h3 className="text-2xl font-semibold text-amber-400 mb-6">Presale Ends In:</h3>
             <div className="flex justify-center space-x-4 relative">
               <TimeCard value={timeLeft.days} label="Days" />
               <TimeCard value={timeLeft.hours} label="Hours" />

@@ -1,5 +1,6 @@
 // components/Announcements.js
 import React, { useState, useEffect, useRef } from 'react';
+import coinImage from '../assets/last-chance-coin.jpeg';
 
 // Move announcements data outside component to avoid dependency issues
 const ANNOUNCEMENTS_DATA = [
@@ -121,7 +122,7 @@ const Announcements = () => {
       }}
     >
       <img 
-        src="/last-chance-coin.jpeg" 
+        src={coinImage}
         alt="Last Chance Coin" 
         className={`${size} animate-spin`}
         style={{ animationDuration: '25s' }}

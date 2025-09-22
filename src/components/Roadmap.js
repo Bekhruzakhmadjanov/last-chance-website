@@ -1,5 +1,6 @@
 // components/Roadmap.js
 import React, { useState, useEffect, useRef } from 'react';
+import coinImage from '../assets/last-chance-coin.jpeg';
 
 // Move roadmap data outside component to avoid dependency issues
 const ROADMAP_PHASES = [
@@ -79,7 +80,7 @@ const Roadmap = () => {
       }}
     >
       <img 
-        src="/last-chance-coin.jpeg" 
+        src={coinImage}
         alt="Last Chance Coin" 
         className={`${size} animate-spin`}
         style={{ animationDuration: '20s' }}
