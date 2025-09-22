@@ -1,15 +1,17 @@
 {
   "files": {
     "main.css": "/last-chance-website/static/css/main.09e67ed4.css",
-    "main.js": "/last-chance-website/static/js/main.d17c3430.js",
+    "main.js": "/last-chance-website/static/js/main.f3f8e55e.js",
     "static/js/453.84f90fd1.chunk.js": "/last-chance-website/static/js/453.84f90fd1.chunk.js",
+    "static/media/last-chance-coin.jpeg": "/last-chance-website/static/media/last-chance-coin.88037592eabe7ad492be.jpeg",
+    "static/media/frame.png": "/last-chance-website/static/media/frame.626a97a50f71f0ec372b.png",
     "index.html": "/last-chance-website/index.html",
     "main.09e67ed4.css.map": "/last-chance-website/static/css/main.09e67ed4.css.map",
-    "main.d17c3430.js.map": "/last-chance-website/static/js/main.d17c3430.js.map",
+    "main.f3f8e55e.js.map": "/last-chance-website/static/js/main.f3f8e55e.js.map",
     "453.84f90fd1.chunk.js.map": "/last-chance-website/static/js/453.84f90fd1.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.09e67ed4.css",
-    "static/js/main.d17c3430.js"
+    "static/js/main.f3f8e55e.js"
   ]
 }
